@@ -24,9 +24,10 @@ export async function PATCH(
 				...values,
 			}
 		});
+
         return NextResponse.json(course);
 	} catch {
-		console.log('[COURSE_ID]', Error);
+		console.log('[COURSE_ID]', error);
 		return new NextResponse('Internal error', { status: 500 });
 	}
 
